@@ -9,9 +9,9 @@ public class Controle : MonoBehaviour
     Vector2 mover;
     Animator an;
 
-    float vida = 2;
+    float vida = 6;
 
-    float vidaMax = 2;
+    float vidaMax = 6;
 
     Image BarraVida;
 
