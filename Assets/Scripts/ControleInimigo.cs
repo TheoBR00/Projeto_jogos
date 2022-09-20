@@ -5,8 +5,10 @@ using UnityEngine;
 public class ControleInimigo : MonoBehaviour
 {
     [SerializeField] float vel;
+    [SerializeField] AudioClip morte;
     GameObject jogador;
     Animator an;
+    AudioSource zumbi_morrendo;
     bool vivo = true;
 
     // Start is called before the first frame update
@@ -15,6 +17,8 @@ public class ControleInimigo : MonoBehaviour
         jogador = GameObject.FindGameObjectWithTag("Player");
 
         an = GetComponentInChildren<Animator>();
+
+        zumbi_morrendo = GetComponent<AudioSource>();
 
         
     }
@@ -32,7 +36,7 @@ public class ControleInimigo : MonoBehaviour
         if(collision.CompareTag("Bala")){
             an.SetTrigger("Morto");
             vivo = false;
-
+            zumbi_morrendo.PlayOneShot(morte);
             Destroy(gameObject, 0.8f);
         }
     }

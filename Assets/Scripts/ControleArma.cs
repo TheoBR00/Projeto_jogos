@@ -8,10 +8,12 @@ public class ControleArma : MonoBehaviour
 
     public GameObject bala;
     public Transform apareceBala;
+    AudioSource som;
     // Start is called before the first frame update
     void Start()
     {
         arma = GetComponent<SpriteRenderer>();
+        som = GetComponent<AudioSource>();
 
         
     }
@@ -29,6 +31,7 @@ public class ControleArma : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             Instantiate(bala, apareceBala.position, transform.rotation);
+            som.Play();
         }
 
     }
