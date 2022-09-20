@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading;
 
 public class Controle : MonoBehaviour
 {
@@ -9,9 +10,9 @@ public class Controle : MonoBehaviour
     Vector2 mover;
     Animator an;
 
-    float vida = 6;
+    float vida = 3;
 
-    float vidaMax = 6;
+    float vidaMax = 3;
 
     Image BarraVida;
 
@@ -43,7 +44,9 @@ public class Controle : MonoBehaviour
             BarraVida.fillAmount = vida/vidaMax;
 
             if(vida == 0){
-                Destroy(gameObject);
+                an.SetBool("isDead", true);
+                //Thread.Sleep(4000);
+                Destroy(gameObject, 2.0f);
             }
         }
         
