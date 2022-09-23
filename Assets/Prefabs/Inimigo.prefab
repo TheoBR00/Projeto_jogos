@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc17f3187a2b61e4ba5925d698d5bbcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 2
+  vel: 4
   morte: {fileID: 8300000, guid: 256178a0a6ae7a041a73526fb0722c77, type: 3}
 --- !u!82 &-3077773499157231273
 AudioSource:

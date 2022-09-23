@@ -7,13 +7,13 @@ public class ControleSpawn : MonoBehaviour
 
     [SerializeField] Transform[] point;
     [SerializeField] GameObject inimigo;
-    int rep = 0;
-    int rep_2 = 0;
+    int limit = 10;
+    bool spawn = true;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("InimigosSpawn", 0.5f, 1.5f);
-            
+        //InvokeRepeating("InimigosSpawn", 0.5f, 1.5f);
+        StartCoroutine("InimigosSpawn");
         
         
         
@@ -22,21 +22,35 @@ public class ControleSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
-        if(rep_2 > 0){
-            InvokeRepeating("InimigosSpawn", 0.5f, 1.0f);
-            rep_2++;
-        }
     }
 
-    void InimigosSpawn(){
-        if(rep < 10){
-            Instantiate(inimigo, point[0].position, point[0].rotation);
-            rep++;
-            if(rep == 10){
-                rep_2++;
+    IEnumerator InimigosSpawn(){
+
+        while(spawn){
+        
+            yield return new WaitForSeconds(2.0f);
+
+            for(int num = 0; num < limit; num++){
+                int indice = Random.Range(0, point.Length);
+                Instantiate(inimigo, point[indice].position, Quaternion.identity);
+                yield return new WaitForSeconds(1.5f);
             }
-        }
+            yield return new WaitForSeconds(10.0f);
+
+            limit += 5;
+
+    }
+
+        
+
+        //if(rep < 10){
+        //    Instantiate(inimigo, point[0].position, point[0].rotation);
+        //    rep++;
+
+            
+        //}
         
 
     }
