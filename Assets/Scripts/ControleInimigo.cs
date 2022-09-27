@@ -11,6 +11,7 @@ public class ControleInimigo : MonoBehaviour
     AudioSource zumbi_morrendo;
     bool vivo = true;
     int rep = 0;
+    int mortes = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class ControleInimigo : MonoBehaviour
             vivo = false;
             zumbi_morrendo.PlayOneShot(morte);
             Destroy(gameObject, 0.8f);
+            mortes+=1;
         }
     }
 
