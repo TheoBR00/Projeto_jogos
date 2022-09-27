@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class WaveScript : MonoBehaviour
+public class ScoreScript : MonoBehaviour
 {
-    public static int waveValue = 1;
-    private Text wave;
+
+    public static int scoreValue = 0;
+
+    private Text score;
     // Start is called before the first frame update
     void Start()
     {
-        wave = GetComponent<Text>();
+        score = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        wave.text = "Wave: " + waveValue;
+        score.text = "Zumbis Mortos: " + scoreValue;
     }
 }

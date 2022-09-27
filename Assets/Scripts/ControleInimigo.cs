@@ -10,7 +10,6 @@ public class ControleInimigo : MonoBehaviour
     Animator an;
     AudioSource zumbi_morrendo;
     bool vivo = true;
-    int mortes = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -34,12 +33,14 @@ public class ControleInimigo : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.CompareTag("Bala")){
+        if(collision.CompareTag("Bala"))
+        {
+            ScoreScript.scoreValue += 1;
             an.SetTrigger("Morto");
             vivo = false;
             zumbi_morrendo.PlayOneShot(morte);
             Destroy(gameObject, 0.8f);
-            mortes+=1;
+            
         }
     }
 

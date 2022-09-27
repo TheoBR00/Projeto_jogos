@@ -40,8 +40,6 @@ public class ControleSpawn : MonoBehaviour
             yield return new WaitForSeconds(10.0f);
 
             limit += 5;
-            WaveScript.waveValue++;
-
         }
 
         
