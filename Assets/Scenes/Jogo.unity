@@ -3253,6 +3253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8f560a370b1f5408ef2bf420f38a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOverMenuUI: {fileID: 662490598}
   vel: 5
 --- !u!212 &2126969001
 SpriteRenderer:

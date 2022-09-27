@@ -6,6 +6,9 @@ using System.Threading;
 
 public class Controle : MonoBehaviour
 {
+    public GameObject GameOverMenuUI;
+    public static bool IsAlive = true;
+    
     [SerializeField] float vel;
     Vector2 mover;
     Animator an;
@@ -46,7 +49,10 @@ public class Controle : MonoBehaviour
             if(vida == 0){
                 an.SetBool("isDead", true);
                 //Thread.Sleep(4000);
+                IsAlive = false;
+                GameOverMenuUI.SetActive(true);
                 Destroy(gameObject, 2.0f);
+                
             }
         }
         
