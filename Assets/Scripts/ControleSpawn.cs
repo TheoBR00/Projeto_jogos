@@ -8,7 +8,6 @@ public class ControleSpawn : MonoBehaviour
     [SerializeField] Transform[] point;
     [SerializeField] GameObject inimigo;
     int limit = 10;
-    int wave = 1;
     bool spawn = true;
     // Start is called before the first frame update
     void Start()
@@ -41,9 +40,9 @@ public class ControleSpawn : MonoBehaviour
             yield return new WaitForSeconds(10.0f);
 
             limit += 5;
-            wave++;
+            WaveScript.waveValue++;
 
-    }
+        }
 
         
 

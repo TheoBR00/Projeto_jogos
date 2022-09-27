@@ -10,7 +10,6 @@ public class ControleInimigo : MonoBehaviour
     Animator an;
     AudioSource zumbi_morrendo;
     bool vivo = true;
-    int rep = 0;
     int mortes = 0;
 
     // Start is called before the first frame update
