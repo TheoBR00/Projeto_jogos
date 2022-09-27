@@ -21,6 +21,10 @@ public class ControleArma : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(PauseMenu.GameIsPaused){
+            return;
+        }
         Mira();
         Tiro();
         

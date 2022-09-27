@@ -30,6 +30,10 @@ public class Controle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(PauseMenu.GameIsPaused){
+            return;
+        }
         mover.x = Input.GetAxis("Horizontal");
         mover.y = Input.GetAxis("Vertical");
 
