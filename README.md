@@ -1,5 +1,11 @@
 # Projeto_jogos
 
+## Documentação:
+https://docs.google.com/document/d/18cc7g060xOPg5dvW3WXVESK6g6-NLmyi4jgbnsZx_ok/edit
+
+## Beat Chart:
+https://docs.google.com/spreadsheets/d/1WQdoSPRVXMuqt-48HMSbSBRgWvCxItyWGPxOvtQuBuw/edit#gid=0
+
 ## Referencias Utilizadas:
 https://www.youtube.com/watch?v=F7fATd3s6xs
 
